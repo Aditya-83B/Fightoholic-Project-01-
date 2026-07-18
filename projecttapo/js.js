@@ -22,7 +22,12 @@ function searchBoxer() {
         "naoya inoue": "profiles.html?id=naoya-inoue",
         "gervonta davis": "profiles.html?id=gervonta-davis",
         "anthony joshua": "profiles.html?id=anthony-joshua",
-
+        "ankalaev": "profiles.html?id=magomed-ankalaev",
+        "kamaru usman": "profiles.html?id=kamaru-usman",
+        "ddp": "profiles.html?id=dricus-du-plessis",
+        "islam": "profiles.html?id=islam-makhachev",
+        "ian garry": "profiles.html?id=ian-machado-garry",
+        "guskov": "profiles.html?id=bogdan-guskov",
         // EVENTS
         "fight night usman": "eventpage.html?id=duplessis-usman",
         "fight night": "eventpage.html?id=duplessis-usman",

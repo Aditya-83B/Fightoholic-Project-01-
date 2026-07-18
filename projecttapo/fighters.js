@@ -279,6 +279,450 @@ const fighters = [
     ]
   },
   {
+    "id": "dricus-du-plessis",
+    "profile": {
+      "name": "Dricus Du Plessis",
+      "image": "https://images.tapology.com/headshot_images/51267/large/Screenshot.png?1705821636",
+      "country": "South Africa",
+      "division": "Middleweight",
+      "stance": "Switch",
+      "ranking": "UFC Middleweight Champion",
+      "badge": "World Champion",
+      "bio": "Dricus 'Stillknocks' Du Plessis is a ferocious South African mixed martial artist known for his relentless pressure, high-volume striking, and elite grappling capabilities."
+    },
+    "record": {
+      "wins": 23,
+      "losses": 3,
+      "draws": 0,
+      "knockouts": 9
+    },
+    "careerStats": {
+      "bouts": 26,
+      "rounds": 53,
+      "koRate": "39.13%",
+      "followers": 950000
+    },
+    "details": {
+      "fighterId": "0d7b51c9d2649a6e",
+      "age": 32,
+      "height": "6'1\"",
+      "reach": "76\"",
+      "career": "2013-2026"
+    },
+    "recentFights": [
+      {
+        "date": "Aug 2025",
+        "opponent": "Khamzat Chimaev",
+        "opponentRecord": "15-1-0",
+        "venue": "UFC 319, Rogers Place",
+        "result": "LOSS",
+        "note": "Lost UFC Middleweight title via Unanimous Decision."
+      },
+      {
+        "date": "Feb 2025",
+        "opponent": "Sean Strickland",
+        "opponentRecord": "31-7-0",
+        "venue": "UFC 312, Qudos Bank Arena",
+        "result": "WIN",
+        "note": "Defended UFC Middleweight championship via Unanimous Decision."
+      },
+      {
+        "date": "Aug 2024",
+        "opponent": "Israel Adesanya",
+        "opponentRecord": "24-6-0",
+        "venue": "UFC 305, RAC Arena",
+        "result": "WIN",
+        "note": "Retained UFC Middleweight title via Submission (Rear Naked Choke) in round 4."
+      },
+      {
+        "date": "Jan 2024",
+        "opponent": "Sean Strickland",
+        "opponentRecord": "28-2-0",
+        "venue": "UFC 297, Scotiabank Arena",
+        "result": "WIN",
+        "note": "Captured UFC Middleweight world championship via Split Decision."
+      },
+      {
+        "date": "Jul 2023",
+        "opponent": "Robert Whittaker",
+        "opponentRecord": "26-9-0",
+        "venue": "UFC 290, T-Mobile Arena",
+        "result": "WIN",
+        "note": "Earned title shot via dominant TKO (Punches) in round 2."
+      }
+    ]
+  },
+  {
+    "id": "kamaru-usman",
+    "profile": {
+      "name": "Kamaru Usman",
+      "image": "https://images.tapology.com/headshot_images/39265/large/Kamaru_Usman-hs.jpg?1543185226",
+      "country": "Nigeria",
+      "division": "Welterweight",
+      "stance": "Orthodox",
+      "ranking": "#5 Welterweight",
+      "badge": "Former Pound-for-Pound King",
+      "bio": "Kamaru 'The Nigerian Nightmare' Usman is a legendary former dominant UFC Welterweight champion celebrated for his suffocating wrestling and clean knockout power."
+    },
+    "record": {
+      "wins": 21,
+      "losses": 4,
+      "draws": 0,
+      "knockouts": 9
+    },
+    "careerStats": {
+      "bouts": 25,
+      "rounds": 73,
+      "koRate": "42.86%",
+      "followers": 3800000
+    },
+    "details": {
+      "fighterId": "f1b2aa7853d1ed6e",
+      "age": 39,
+      "height": "6'0\"",
+      "reach": "76\"",
+      "career": "2012-2026"
+    },
+    "recentFights": [
+      {
+        "date": "Jun 2025",
+        "opponent": "Joaquin Buckley",
+        "opponentRecord": "20-8-0",
+        "venue": "UFC Fight Night, Las Vegas",
+        "result": "WIN",
+        "note": "Returned to the win column with a dominant 5-round Unanimous Decision."
+      },
+      {
+        "date": "Oct 2023",
+        "opponent": "Khamzat Chimaev",
+        "opponentRecord": "13-0-0",
+        "venue": "UFC 294, Etihad Arena",
+        "result": "LOSS",
+        "note": "Stepped up to Middleweight on 10 days' notice. Lost highly competitive Majority Decision."
+      },
+      {
+        "date": "Mar 2023",
+        "opponent": "Leon Edwards",
+        "opponentRecord": "21-3-0",
+        "venue": "UFC 286, O2 Arena",
+        "result": "LOSS",
+        "note": "Challenged for UFC Welterweight title. Lost via Majority Decision."
+      },
+      {
+        "date": "Aug 2022",
+        "opponent": "Leon Edwards",
+        "opponentRecord": "20-3-0",
+        "venue": "UFC 278, Vivint Arena",
+        "result": "LOSS",
+        "note": "Lost Welterweight crown via shocking head kick KO in the final minute of round 5."
+      },
+      {
+        "date": "Nov 2021",
+        "opponent": "Colby Covington",
+        "opponentRecord": "16-3-0",
+        "venue": "UFC 268, Madison Square Garden",
+        "result": "WIN",
+        "note": "Retained Welterweight title via Unanimous Decision. Covington down twice in round 2."
+      }
+    ]
+  },
+  {
+    "id": "magomed-ankalaev",
+    "profile": {
+      "name": "Magomed Ankalaev",
+      "image": "https://images.tapology.com/headshot_images/83405/large/Magomed-Ankalaev.jpg?1670645565",
+      "country": "Russia",
+      "division": "Light Heavyweight",
+      "stance": "Orthodox",
+      "ranking": "#2 Light Heavyweight",
+      "badge": "Elite Contender",
+      "bio": "Magomed Ankalaev is an incredibly well-rounded Dagestani light heavyweight threat known for his technical counter-striking, high fight IQ, and masterclass wrestling base."
+    },
+    "record": {
+      "wins": 21,
+      "losses": 2,
+      "draws": 1,
+      "knockouts": 10
+    },
+    "careerStats": {
+      "bouts": 25,
+      "rounds": 68,
+      "koRate": "47.62%",
+      "followers": 520000
+    },
+    "details": {
+      "fighterId": "d802174b0c0c1f4e",
+      "age": 34,
+      "height": "6'3\"",
+      "reach": "75\"",
+      "career": "2014-2026"
+    },
+    "recentFights": [
+      {
+        "date": "Oct 2025",
+        "opponent": "Alex Pereira",
+        "opponentRecord": "13-2-0",
+        "venue": "UFC 320, Salt Lake City",
+        "result": "LOSS",
+        "note": "Challenged for UFC Light Heavyweight title. Stopped via KO/TKO (Elbows) in round 1."
+      },
+      {
+        "date": "Mar 2025",
+        "opponent": "Alex Pereira",
+        "opponentRecord": "12-2-0",
+        "venue": "UFC 313, Las Vegas",
+        "result": "WIN",
+        "note": "Secured major ranking statement victory via highly technical Unanimous Decision."
+      },
+      {
+        "date": "Oct 2024",
+        "opponent": "Aleksandar Rakic",
+        "opponentRecord": "14-4-0",
+        "venue": "UFC 308, Etihad Arena",
+        "result": "WIN",
+        "note": "Won precise kickboxing battles across a clear 3-round Unanimous Decision."
+      },
+      {
+        "date": "Jan 2024",
+        "opponent": "Johnny Walker",
+        "opponentRecord": "21-8-0",
+        "venue": "UFC Fight Night, Las Vegas",
+        "result": "WIN",
+        "note": "Settled structural rivalry with an emphatic KO (Punch) in round 2."
+      },
+      {
+        "date": "Oct 2023",
+        "opponent": "Johnny Walker",
+        "opponentRecord": "21-7-0",
+        "venue": "UFC 294, Etihad Arena",
+        "result": "NC",
+        "note": "Bout ruled No Contest inside round 1 due to an accidental illegal knee rendering Walker unable to continue."
+      }
+    ]
+  },
+  {
+    "id": "islam-makhachev",
+    "profile": {
+      "name": "Islam Makhachev",
+      "image": "https://images.tapology.com/headshot_images/40148/preview/islam-makhachev_hs.jpg?1716558700",
+      "country": "Russia",
+      "division": "Welterweight",
+      "stance": "Southpaw",
+      "ranking": "UFC Welterweight Champion",
+      "badge": "Two-Division Champion",
+      "bio": "Islam Makhachev is a dominant Dagestani mixed martial artist, elite combat Sambo world champion, and the UFC Welterweight Champion widely praised for his flawless pressure grappling and highly evolved striking."
+    },
+    "record": {
+      "wins": 28,
+      "losses": 1,
+      "draws": 0,
+      "knockouts": 5
+    },
+    "careerStats": {
+      "bouts": 29,
+      "rounds": 64,
+      "koRate": "17.86%",
+      "followers": 9200000
+    },
+    "details": {
+      "fighterId": "a90174b0c0c1f4e",
+      "age": 34,
+      "height": "5'10\"",
+      "reach": "70\"",
+      "career": "2010-2026"
+    },
+    "recentFights": [
+      {
+        "date": "Jun 2025",
+        "opponent": "Jack Della Maddalena",
+        "opponentRecord": "18-2-0",
+        "venue": "UFC 315, Brisbane Entertainment Centre",
+        "result": "WIN",
+        "note": "Won the UFC Welterweight Championship via Submission (Arm-Triangle Choke) in round 3."
+      },
+      {
+        "date": "Jun 2024",
+        "opponent": "Dustin Poirier",
+        "opponentRecord": "30-8-0",
+        "venue": "UFC 302, Prudential Center",
+        "result": "WIN",
+        "note": "Retained UFC Lightweight title via Submission (D'Arce Choke) in round 5."
+      },
+      {
+        "date": "Oct 2023",
+        "opponent": "Alexander Volkanovski",
+        "opponentRecord": "26-2-0",
+        "venue": "UFC 294, Etihad Arena",
+        "result": "WIN",
+        "note": "Retained UFC Lightweight title via brutal KO (Head Kick and Punches) in round 1."
+      },
+      {
+        "date": "Feb 2023",
+        "opponent": "Alexander Volkanovski",
+        "opponentRecord": "25-1-0",
+        "venue": "UFC 284, RAC Arena",
+        "result": "WIN",
+        "note": "Retained UFC Lightweight title via Unanimous Decision in a historic P4P super-fight."
+      },
+      {
+        "date": "Oct 2022",
+        "opponent": "Charles Oliveira",
+        "opponentRecord": "33-8-0",
+        "venue": "UFC 280, Etihad Arena",
+        "result": "WIN",
+        "note": "Captured vacant UFC Lightweight world title via Submission (Arm-Triangle Choke) in round 2."
+      }
+    ]
+  },
+  {
+    "id": "bogdan-guskov",
+    "profile": {
+      "name": "Bogdan Guskov",
+      "image": "https://images.tapology.com/headshot_images/136052/large/Bogdan_Guskov-hs.jpg?1602258998",
+      "country": "Uzbekistan",
+      "division": "Light Heavyweight",
+      "stance": "Orthodox",
+      "ranking": "#10 Light Heavyweight",
+      "badge": "The Hitman",
+      "bio": "Bogdan 'Hitman' Guskov is a highly explosive light heavyweight finisher out of Uzbekistan known for his devastating, single-shot knockout power and aggressive first-round finishes."
+    },
+    "record": {
+      "wins": 18,
+      "losses": 3,
+      "draws": 1,
+      "knockouts": 14
+    },
+    "careerStats": {
+      "bouts": 22,
+      "rounds": 32,
+      "koRate": "77.78%",
+      "followers": 140000
+    },
+    "details": {
+      "fighterId": "ef5dcb10d2bd4b0f",
+      "age": 33,
+      "height": "6'3\"",
+      "reach": "76\"",
+      "career": "2015-2026"
+    },
+    "recentFights": [
+      {
+        "date": "Dec 2025",
+        "opponent": "Jan Blachowicz",
+        "opponentRecord": "29-11-2",
+        "venue": "UFC 323, Las Vegas",
+        "result": "DRAW",
+        "note": "Ended in a highly competitive Majority Draw decision."
+      },
+      {
+        "date": "Jul 2025",
+        "opponent": "Nikita Krylov",
+        "opponentRecord": "30-10-0",
+        "venue": "UFC Fight Night, Abu Dhabi",
+        "result": "WIN",
+        "note": "Secured a massive first-round victory via KO (Punches)."
+      },
+      {
+        "date": "Jan 2025",
+        "opponent": "Billy Elekana",
+        "opponentRecord": "9-2-0",
+        "venue": "UFC 311, Inglewood",
+        "result": "WIN",
+        "note": "Won via Submission (Guillotine Choke) in round 2."
+      },
+      {
+        "date": "Apr 2024",
+        "opponent": "Ryan Spann",
+        "opponentRecord": "21-9-0",
+        "venue": "UFC Fight Night, Las Vegas",
+        "result": "WIN",
+        "note": "Earned Performance of the Night honors with a heavy TKO (Punches) in round 2."
+      },
+      {
+        "date": "Feb 2024",
+        "opponent": "Zac Pauga",
+        "opponentRecord": "6-2-0",
+        "venue": "UFC Fight Night, Las Vegas",
+        "result": "WIN",
+        "note": "Stellar promotional breakout KO (Punches) inside the very first round."
+      }
+    ]
+  },
+  {
+    "id": "ian-machado-garry",
+    "profile": {
+      "name": "Ian Machado Garry",
+      "image": "https://images.tapology.com/headshot_images/171377/preview/Screenshot.png?1745471875",
+      "country": "Ireland",
+      "division": "Welterweight",
+      "stance": "Orthodox",
+      "ranking": "#1 Welterweight Contender",
+      "badge": "The Future",
+      "bio": "Ian 'The Future' Machado Garry is an undefeated, lightning-fast Irish welterweight sniper who leverages a long, world-class kickboxing foundation and exceptional movement metrics."
+    },
+    "record": {
+      "wins": 17,
+      "losses": 0,
+      "draws": 0,
+      "knockouts": 8
+    },
+    "careerStats": {
+      "bouts": 17,
+      "rounds": 42,
+      "koRate": "47.06%",
+      "followers": 1100000
+    },
+    "details": {
+      "fighterId": "b8241029c0c1f4e",
+      "age": 28,
+      "height": "6'3\"",
+      "reach": "74\"",
+      "career": "2019-2026"
+    },
+    "recentFights": [
+      {
+        "date": "Dec 2025",
+        "opponent": "Belal Muhammad",
+        "opponentRecord": "24-3-0",
+        "venue": "UFC 322, T-Mobile Arena",
+        "result": "WIN",
+        "note": "Secured the #1 contender spot via a technical, high-volume Unanimous Decision."
+      },
+      {
+        "date": "Jun 2025",
+        "opponent": "Carlos Prates",
+        "opponentRecord": "21-6-0",
+        "venue": "UFC Fight Night, Dublin",
+        "result": "WIN",
+        "note": "Won thrilling main event homecoming via Split Decision."
+      },
+      {
+        "date": "Jun 2024",
+        "opponent": "Michael Page",
+        "opponentRecord": "22-2-0",
+        "venue": "UFC 303, T-Mobile Arena",
+        "result": "WIN",
+        "note": "Controlled structural striking lanes to win via Unanimous Decision."
+      },
+      {
+        "date": "Feb 2024",
+        "opponent": "Geoff Neal",
+        "opponentRecord": "15-5-0",
+        "venue": "UFC 298, Honda Center",
+        "result": "WIN",
+        "note": "Utilized lateral footwork and precise distance control to win via Split Decision."
+      },
+      {
+        "date": "Aug 2023",
+        "opponent": "Neil Magny",
+        "opponentRecord": "28-10-0",
+        "venue": "UFC 292, TD Garden",
+        "result": "WIN",
+        "note": "Dominant performance breaking down Magny's base with leg kicks. Wide Unanimous Decision."
+      }
+    ]
+  },
+  {
     "id": "terence-crawford",
     "profile": {
       "name": "Terence Crawford",
@@ -504,7 +948,7 @@ const fighters = [
     "id": "anthony-joshua",
     "profile": {
       "name": "Anthony Joshua",
-      "image": "images/anthony-joshua.jpg",
+      "image": "https://images.tapology.com/headshot_images/212010/preview/20200224_202412.jpg?1582575882",
       "country": "United Kingdom",
       "division": "Heavyweight",
       "stance": "Orthodox",

@@ -220,11 +220,15 @@
         margin-right: 12px;
         box-shadow: 0 0 8px #e10600;
       }
+    
 
       .hero {
         padding: 12px 20px;
         width: 80vw;
         margin: 0 auto;
+      }
+      .fight a{
+        text-decoration: none;
       }
 
       .hero-content {
@@ -557,3 +561,14 @@
         margin-top: 20px;
         color: #aab2c0;
       }
+    .heading {
+  text-decoration: none;
+  color: #f81e13; 
+  transition: color 0.3s ease;
+}
+
+.heading:hover {
+  
+  color: #ef5c1d; 
+  transition: color .7s ease;
+}
