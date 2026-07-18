@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boxing Profile</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <nav>
+    <div class="logo"> <a class="ac" href="tapo.html"
+          ><svg class="site-logo" width="250" height="60" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="opt1Text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#CFD5DF" />
+    </linearGradient>
+    <linearGradient id="opt1Glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3B30" />
+      <stop offset="100%" stop-color="#FF9F1C" />
+    </linearGradient>
+  </defs>
+  <path d="M6 16 L16 6 H34 L44 16 V34 L34 44 H16 L6 34 Z" fill="none" stroke="url(#opt1Glow)" stroke-width="2.5" stroke-linejoin="round"/>
+  
+  <path d="M18 15 H32 V19 H22 V23 H30 V27 H22 V35 H18 Z" fill="#FFFFFF" />
+  
+  <text x="54" y="33" font-family="'Impact', 'Arial Black', sans-serif" font-size="23" font-style="italic" font-weight="900" fill="url(#opt1Text)" letter-spacing="1">FIGHT</text>
+  <text x="110" y="33" font-family="'Impact', 'Arial Black', sans-serif" font-size="23" font-style="italic" font-weight="900" fill="url(#opt1Glow)" letter-spacing="1">OHOLIC</text>
+</svg></a></div>
+    <ul>
+   <li><a class="c" href="tapo.html">Home</a></li>
+        <li><a class="c" href="forum.html">Forum</a></li>
+        <li><a class="c" href="login.html">Login</a></li>
+        <li><a class="c" href="contactpage.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+    <form class="search-bar">
+      <input type="text" id="searchBox" placeholder="Search fighters, events, news">
+<button type="button" onclick="searchBoxer()">Go</button>
+    </form>
+
+    <section class="profile">
+      <aside class="card fighter-card">
+        <img class="portrait" id="image" src="https://imgs.search.brave.com/YIH04ltzSJmfnFj49exRflC2j-gItYSw0ftBQAdpI1k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vd3d3Lndi/YWJveGluZy5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMTgv/MTEvV2hhdHNBcHAt/SW1hZ2UtMjAxOC0x/MS0wNy1hdC0xMy4w/Ny4wOC5qcGVnP2Zp/dD01MjUsMzUwJnNz/bD0x" alt="Oleksandr Usyk profile photo">
+        <h1 class="name" id="name">Oleksandr Usyk</h1>
+        <p class="subtitle" id="subtitle">Heavyweight | Southpaw | Ukraine</p>
+
+        <div class="record">
+          <div class="record-box">
+            <strong id="wins">25</strong>
+            <span>Wins</span>
+          </div>
+          <div class="record-box">
+            <strong id="losses">0</strong>
+            <span>Losses</span>
+          </div>
+          <div class="record-box">
+            <strong id="kos">16</strong>
+            <span>KOs</span>
+          </div>
+        </div>
+
+        <div class="facts">
+          <div class="fact"><span>ID</span><strong id="fighterid">659772</strong></div>
+          <div class="fact"><span>Age</span><strong id="age">39</strong></div>
+          <div class="fact"><span>Height</span><strong id="height">6' 3"</strong></div>
+          <div class="fact"><span>Reach</span><strong id="reach">78"</strong></div>
+          <div class="fact"><span>Career</span><strong id="career">2013-2026</strong></div>
+        </div>
+      </aside>
+
+      <section class="main-panel">
+        <article class="card hero">
+          <div class="hero-top">
+            <div>
+              <h2 id="ranking">#1 WBA Heavyweight</h2>
+              <p id="bio">Oleksandr Usyk is a Ukrainian heavyweight boxing champion known for his exceptional footwork, ring IQ, and technical skill. A former undisputed cruiserweight champion, he successfully moved up to heavyweight and defeated elite opponents to become one of the best pound-for-pound fighters in the world.</p>
+            </div>
+            <span class="badge" id="badge">Heavyweight Boxer</span>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat">
+              <strong id="bouts">25</strong>
+              <span>Bouts</span>
+            </div>
+            <div class="stat">
+              <strong id="rounds">217</strong>
+              <span>Rounds</span>
+            </div>
+            <div class="stat">
+              <strong id="koRate">64%</strong>
+              <span>KO Rate</span>
+            </div>
+            <div class="stat">
+              <strong id="followers">13,739</strong>
+              <span>Followers</span>
+            </div>
+          </div>
+        </article>
+
+        <section class="card table-card">
+          <div class="table-header">
+            <h2>Last 5 Fights</h2>
+            <span>Pro Boxing</span>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Opponent</th>
+                <th>Opponent Record</th>
+                <th>Venue</th>
+                <th>Result</th>
+                <th>Note</th>
+              </tr>
+            </thead>
+            <tbody id="fightTable">
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>©Fightoholic</p>
+  </footer>
+</body>
+ <script src="fighters.js"></script>
+  <script src="profile.js"></script>
+  <script src="js.js"></script>
+  <script src="event.js"></script>
+  <script src="eventjs.js"></script>
+</html>
