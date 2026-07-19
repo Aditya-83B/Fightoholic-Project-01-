@@ -329,7 +329,7 @@
       }
 
       .fighter-box {
-        min-width: 190px;
+        min-width: 500px;
         padding: 16px;
         border-radius: 12px;
         background: linear-gradient(145deg, #222831, #151922);
@@ -349,8 +349,8 @@
 
       .fighter-box img {
         width: 100%; /* Changes from 30vw to perfectly scale inside its container */
-        max-width: 200px; /* Keeps the portrait aspect ratio intact */
-        height: 200px;
+        max-width: 350px; /* Keeps the portrait aspect ratio intact */
+        height: 350px;
         object-fit: cover;
         border-radius: 15px;
         display: block;
