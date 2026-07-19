@@ -525,8 +525,7 @@
         output.innerHTML = `<p style="color: #aab2c0; font-style: italic;">Analyzing tactics...</p>`;
 
         try {
-          // 2. Initialize exactly using the client configuration object property
-          const ai = new GoogleGenAI({ apiKey: API_KEY });
+const ai = new GoogleGenAI({ key: API_KEY });
 
          const response = await ai.models.generateContent({
   model: 'gemini-1.5-flash', // <--- Updated to the correct active model
