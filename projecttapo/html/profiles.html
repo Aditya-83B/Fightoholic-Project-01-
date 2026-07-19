@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boxing Profile</title>
+  <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+  <nav>
+    <div class="logo"> <a class="ac" href="Main.html"
+          ><svg class="site-logo" width="250" height="60" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="opt1Text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#CFD5DF" />
+    </linearGradient>
+    <linearGradient id="opt1Glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3B30" />
+      <stop offset="100%" stop-color="#FF9F1C" />
+    </linearGradient>
+  </defs>
+  <path d="M6 16 L16 6 H34 L44 16 V34 L34 44 H16 L6 34 Z" fill="none" stroke="url(#opt1Glow)" stroke-width="2.5" stroke-linejoin="round"/>
+  
+  <path d="M18 15 H32 V19 H22 V23 H30 V27 H22 V35 H18 Z" fill="#FFFFFF" />
+  
+  <text x="54" y="33" font-family="'Impact', 'Arial Black', sans-serif" font-size="23" font-style="italic" font-weight="900" fill="url(#opt1Text)" letter-spacing="1">FIGHT</text>
+  <text x="110" y="33" font-family="'Impact', 'Arial Black', sans-serif" font-size="23" font-style="italic" font-weight="900" fill="url(#opt1Glow)" letter-spacing="1">OHOLIC</text>
+</svg></a></div>
+    <ul>
+   <li><a class="c" href="Main.html">Home</a></li>
+        <li><a class="c" href="forum.html">Forum</a></li>
+        <li><a class="c" href="login.html">Login</a></li>
+        <li><a class="c" href="contactpage.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+    <form class="search-bar">
+      <input type="text" id="searchBox" placeholder="Search fighters, events, news">
+<button type="button" onclick="searchBoxer()">Go</button>
+    </form>
+<!-- Fixed Bouncing Octagon Floating Button -->
+<div id="aiCoachTrigger" class="ai-coach-trigger">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 90" width="100%" height="90" style="cursor: pointer; overflow: visible;">
+    <defs>
+      <filter id="cageGlow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#e10600" flood-opacity="0.3"/>
+        <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000000" flood-opacity="0.6"/>
+      </filter>
+      <linearGradient id="cageGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#c93300" />
+        <stop offset="20%" stop-color="#e10600" />
+        <stop offset="100%" stop-color="#ff7a00" />
+      </linearGradient>
+      <pattern id="cageMesh" width="6" height="6" patternUnits="userSpaceOnUse">
+        <path d="M 0 3 L 6 3 M 3 0 L 3 6" fill="none" stroke="#FFFFFF" stroke-width="0.5" opacity="0.04"/>
+      </pattern>
+    </defs>
+    <g filter="url(#cageGlow)">
+      <polygon points="26,0 104,0 130,26 130,64 104,90 26,90 0,64 0,26" fill="#111116" />
+      <polygon points="26,0 104,0 130,26 130,64 104,90 26,90 0,64 0,26" fill="url(#cageMesh)" />
+      <polygon points="26,0 104,0 130,26 130,64 104,90 26,90 0,64 0,26" fill="none" stroke="url(#cageGradient)" stroke-width="2.5" />
+      <polygon points="27,3 103,3 127,27 127,63 103,87 27,87 3,63 3,27" fill="none" stroke="#FFFFFF" stroke-width="0.75" opacity="0.12" />
+    </g>
+    <g fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', sans-serif" font-weight="900" text-anchor="middle" text-transform="uppercase">
+      <text x="65" y="38" font-size="22" letter-spacing="3">AI</text>
+      <text x="65" y="60" font-size="18" letter-spacing="2" fill="url(#cageGradient)">Coach</text>
+    </g>
+  </svg>
+</div>
+
+<!-- FIXED: Added the missing overlay element required by your script -->
+<div id="aiCoachOverlay" class="ai-coach-overlay"></div>
+
+<!-- Central Expanding AI Coach Interface Window -->
+<div id="aiCoachModal" class="ai-coach-modal">
+  <div class="modal-header">
+    <h3>AI COACH INSIGHTS</h3>
+    <small id="statusField" style="color: #ff9f1c; margin-left: 15px; font-weight: bold;"></small>
+    <button id="closeAiCoach" class="modal-close-btn">&times;</button>
+  </div>
+  <div class="modal-body">
+    <!-- Chat container targets this layout -->
+    <div class="chat-display" id="output">
+      <!-- FIXED: Gave the welcome message an individual id so the script can append text below it or replace it cleanly -->
+      <p id="welcomeMessage" style="color: #d6d9df; font-size: 14px; line-height: 1.5; margin: 0; border-left: 3px solid #ff7a00; padding-left: 10px;">
+        Corner secured. What strategy or prediction analysis do you need for the upcoming fights?
+      </p>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="userPrompt" placeholder="Ask about striking accuracy, trends, or fight breakdowns..." />
+      <button id="askBtn">Analyze</button>
+    </div>
+  </div>
+</div>
+    <section class="profile">
+      <!-- Put this in the <head> of your index.html -->
+<!-- Put this in the <head> of your index.html if you haven't already -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<!-- The Card Container (Maintains original layout structure) -->
+<aside class="card-container">
+  <div class="card-inner">
+    
+    <!-- FRONT OF CARD -->
+    <div class="card-front">
+      <img class="portrait" id="image" src="https://imgs.search.brave.com/YIH04ltzSJmfnFj49exRflC2j-gItYSw0ftBQAdpI1k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vd3d3Lndi/YWJveGluZy5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMTgv/MTEvV2hhdHNBcHAt/SW1hZ2UtMjAxOC0x/MS0wNy1hdC0xMy4w/Ny4wOC5qcGVnP2Zp/dD01MjUsMzUwJnNz/bD0x" alt="Oleksandr Usyk profile photo">
+      <h1 class="name" id="name">Oleksandr Usyk</h1>
+      <p class="subtitle" id="subtitle">Heavyweight | Southpaw | Ukraine</p>
+
+      <div class="record">
+        <div class="record-box"><strong id="wins">25</strong><span>Wins</span></div>
+        <div class="record-box"><strong id="losses">0</strong><span>Losses</span></div>
+        <div class="record-box"><strong id="kos">16</strong><span>KOs</span></div>
+      </div>
+
+      <div class="facts">
+        <div class="fact"><span>ID</span><strong id="fighterid">659772</strong></div>
+        <div class="fact"><span>Age</span><strong id="age">39</strong></div>
+        <div class="fact"><span>Height</span><strong id="height">6' 3"</strong></div>
+        <div class="fact"><span>Reach</span><strong id="reach">78"</strong></div>
+        <div class="fact"><span>Career</span><strong id="career">2013-2026</strong></div>
+      </div>
+
+      <!-- Large Real Icons Anchored Cleanly at the Bottom -->
+      <div class="social-overlay">
+        <a href="https://instagram.com/usykaa" target="_blank"  class="social-icon insta" title="Instagram" >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://en.wikipedia.org/wiki/Oleksandr_Usyk" target="_blank" class="social-icon wiki" title="Wikipedia">
+          <i class="fab fa-wikipedia-w"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- BACK OF CARD -->
+    <div class="card-back">
+      <h3 class="back-title">Athletic Breakdown</h3>
+      <div class="breakdown-details">
+        <div class="breakdown-row"><span>Stance Type</span><strong>Southpaw</strong></div>
+        <div class="breakdown-row"><span>APE Index</span><strong>+1.5"</strong></div>
+        <div class="breakdown-row"><span>Promoter</span><strong>K2 Promotions</strong></div>
+        <div class="breakdown-row"><span>Training Camp</span><strong>Oxnard, CA</strong></div>
+      </div>
+      <p class="click-hint">Click card to flip back</p>
+    </div>
+
+  </div>
+</aside>
+
+      <section class="main-panel">
+        <article class="card hero">
+          <div class="hero-top">
+            <div>
+              <h2 id="ranking">#1 WBA Heavyweight</h2>
+              <p id="bio">Oleksandr Usyk is a Ukrainian heavyweight boxing champion known for his exceptional footwork, ring IQ, and technical skill. A former undisputed cruiserweight champion, he successfully moved up to heavyweight and defeated elite opponents to become one of the best pound-for-pound fighters in the world.</p>
+            </div>
+            <span class="badge" id="badge">Heavyweight Boxer</span>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat">
+              <strong id="bouts">25</strong>
+              <span>Bouts</span>
+            </div>
+            <div class="stat">
+              <strong id="rounds">217</strong>
+              <span>Rounds</span>
+            </div>
+            <div class="stat">
+              <strong id="koRate">64%</strong>
+              <span>KO Rate</span>
+            </div>
+            <div class="stat">
+              <strong id="followers">13,739</strong>
+              <span>Followers</span>
+            </div>
+          </div>
+        </article>
+
+        <section class="card table-card">
+          <div class="table-header">
+            <h2>Last 5 Fights</h2>
+            <span>Pro Boxing</span>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Opponent</th>
+                <th>Opponent Record</th>
+                <th>Venue</th>
+                <th>Result</th>
+                <th>Note</th>
+              </tr>
+            </thead>
+            <tbody id="fightTable">
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>©Fightoholic</p>
+  </footer>
+</body>
+ <script src="../js/fighters.js"></script>
+  <script src="../js/profile.js"></script>
+  <script src="../js/js.js"></script>
+  <script src="../js/event.js"></script>
+  <script src="../js/eventjs.js"></script>
+  <script> const aiTrigger = document.getElementById('aiCoachTrigger');
+  const aiOverlay = document.getElementById('aiCoachOverlay');
+  const aiModal = document.getElementById('aiCoachModal');
+  const aiClose = document.getElementById('closeAiCoach');
+
+  aiTrigger.addEventListener('click', () => {
+    aiOverlay.classList.add('active');
+    aiModal.classList.add('active');
+    aiTrigger.style.opacity = '0';
+    aiTrigger.style.pointerEvents = 'none';
+  });
+
+  function closeCoachModal() {
+    aiOverlay.classList.remove('active');
+    aiModal.classList.remove('active');
+    aiTrigger.style.opacity = '1';
+    aiTrigger.style.pointerEvents = 'auto';
+  }
+  aiClose.addEventListener('click', closeCoachModal);
+  aiOverlay.addEventListener('click', closeCoachModal);
+</script>
+
+<!-- 3. AI SDK Module Integration Block -->
+<script type="module">
+  import { GoogleGenAI } from 'https://esm.sh/@google/genai';
+
+  const API_KEY = "AQ.Ab8RN6IGvxX8EFgytq7Ht8oM1JTOW1WXHv3hIOSRdOw1IPm5bQ"; 
+  
+  const askBtn = document.getElementById('askBtn');
+  const userPrompt = document.getElementById('userPrompt');
+  const output = document.getElementById('output');
+  const statusField = document.getElementById('statusField');
+
+  askBtn.addEventListener('click', async () => {
+    const textQuery = userPrompt.value.trim();
+    
+    if (!textQuery) {
+      output.innerHTML = `<p style="color: #ff9f1c;">⚠️ Please type a question into the text area first!</p>`;
+      return;
+    }
+
+    askBtn.disabled = true;
+    statusField.innerText = "Thinking...";
+    output.innerHTML = `<p style="color: #aab2c0; font-style: italic;">Analyzing tactics...</p>`;
+
+    try {
+      const ai = new GoogleGenAI({ apiKey: API_KEY });
+
+     // Change this line inside your try{} block:
+const response = await ai.models.generateContent({
+  model: 'gemini-3.5-flash', // <--- UPDATE THIS STRING
+  contents: textQuery,
+  config: {
+    systemInstruction: "You are CornerMan AI, an elite boxing and MMA tactical coach. Give concise, highly practical technical ringside advice using bold emphasis on key combos."
+  }
+});
+
+      output.innerHTML = `<p class="ai-message">${response.text.replace(/\n/g, '<br>')}</p>`;
+      statusField.innerText = "Ready";
+      userPrompt.value = ""; 
+
+    } catch (error) {
+      console.error(error);
+      output.innerHTML = `<p style="color: #e10600;">❌ Call Failed: ${error.message}</p>`;
+      statusField.innerText = "Error";
+    } finally {
+      askBtn.disabled = false;
+    }
+  });
+
+  userPrompt.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') askBtn.click();
+  });</script>
+</html>

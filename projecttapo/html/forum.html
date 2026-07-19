@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fightoholic Forum</title>
+   <link rel="stylesheet" href="../css/forum.css">
+
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+         <a class="ac" href="Main.html"
+          ><svg class="site-logo" width="250" height="60" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="opt1Text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#CFD5DF" />
+    </linearGradient>
+    <linearGradient id="opt1Glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3B30" />
+      <stop offset="100%" stop-color="#FF9F1C" />
+    </linearGradient>
+  </defs>
+  <path d="M6 16 L16 6 H34 L44 16 V34 L34 44 H16 L6 34 Z" fill="none" stroke="url(#opt1Glow)" stroke-width="2.5" stroke-linejoin="round"/>
+  
+  <path d="M18 15 H32 V19 H22 V23 H30 V27 H22 V35 H18 Z" fill="#FFFFFF" />
+  
+  <text x="54" y="33" font-family="'Impact', 'Arial Black', sans-serif" font-size="23" font-style="italic" font-weight="900" fill="url(#opt1Text)" letter-spacing="1">FIGHT</text>
+  <text x="110" y="33" font-family="'Impact', 'Arial Black', sans-serif" font-size="23" font-style="italic" font-weight="900" fill="url(#opt1Glow)" letter-spacing="1">OHOLIC</text>
+</svg></a>
+    </div>
+
+    <ul>
+        <li><a class="c" href="Main.html">Home</a></li>
+        <li><a class="c" href="forum.html">Forum</a></li>
+        <li><a class="c" href="login.html">Login</a></li>
+        <li><a class="c" href="contactpage.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ================= HEADER ================= -->
+
+<header class="forum-header">
+
+    <h1>Fightoholic Forums</h1>
+
+    <p>
+        Discuss boxing, UFC, MMA, fight predictions,
+        rankings, news and everything combat sports.
+    </p>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search discussions...">
+        <button>Search</button>
+    </div>
+
+</header>
+
+<!-- ================= MAIN ================= -->
+
+<div class="container">
+
+    <!-- LEFT -->
+
+    <main>
+
+        <!-- Categories -->
+
+        <section class="card">
+
+            <div class="section-title">
+                <h2>Categories</h2>
+            </div>
+
+            <div class="categories">
+
+                <div class="category">
+                    🥊 Boxing
+                </div>
+
+                <div class="category">
+                    🥋 UFC / MMA
+                </div>
+
+                <div class="category">
+                    📰 Fight News
+                </div>
+
+                <div class="category">
+                    🎯 Predictions
+                </div>
+
+                <div class="category">
+                    👑 Champions
+                </div>
+
+                <div class="category">
+                    📈 Rankings
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Latest Discussions -->
+
+        <section class="card">
+
+            <div class="section-title">
+
+                <h2>Latest Discussions</h2>
+
+                <button class="new-thread">
+                    + New Thread
+                </button>
+
+            </div>
+
+            <div class="thread">
+
+                <div>
+
+                    <h3>
+                        Will Topuria beat Islam?
+                    </h3>
+
+                    <p>
+                        Started by Adi • UFC Discussion
+                    </p>
+
+                </div>
+
+                <div class="thread-info">
+
+                    <span>156 Replies</span>
+
+                    <small>2h ago</small>
+
+                </div>
+
+            </div>
+
+            <div class="thread">
+
+                <div>
+
+                    <h3>
+                        Usyk vs Fury trilogy?
+                    </h3>
+
+                    <p>
+                        Started by BoxingFan
+                    </p>
+
+                </div>
+
+                <div class="thread-info">
+
+                    <span>94 Replies</span>
+
+                    <small>Yesterday</small>
+
+                </div>
+
+            </div>
+
+            <div class="thread">
+
+                <div>
+
+                    <h3>
+                        Pereira's toughest opponent?
+                    </h3>
+
+                    <p>
+                        Started by UFCKing
+                    </p>
+
+                </div>
+
+                <div class="thread-info">
+
+                    <span>71 Replies</span>
+
+                    <small>5h ago</small>
+
+                </div>
+
+            </div>
+
+            <div class="thread">
+
+                <div>
+
+                    <h3>
+                        Greatest boxer ever?
+                    </h3>
+
+                    <p>
+                        Started by AliForever
+                    </p>
+
+                </div>
+
+                <div class="thread-info">
+
+                    <span>203 Replies</span>
+
+                    <small>8h ago</small>
+
+                </div>
+
+            </div>
+
+            <div class="thread">
+
+                <div>
+
+                    <h3>
+                        UFC 330 Predictions
+                    </h3>
+
+                    <p>
+                        Started by FightGeek
+                    </p>
+
+                </div>
+
+                <div class="thread-info">
+
+                    <span>42 Replies</span>
+
+                    <small>Today</small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Create Thread -->
+
+        <section class="card">
+
+            <div class="section-title">
+
+                <h2>Create Discussion</h2>
+
+            </div>
+
+            <form id="threadForm">
+
+                <input
+                type="text"
+                placeholder="Discussion Title">
+
+                <select>
+
+                    <option>
+                        Select Category
+                    </option>
+
+                    <option>
+                        Boxing
+                    </option>
+
+                    <option>
+                        UFC / MMA
+                    </option>
+
+                    <option>
+                        Fight News
+                    </option>
+
+                    <option>
+                        Predictions
+                    </option>
+
+                    <option>
+                        Rankings
+                    </option>
+
+                </select>
+
+                <textarea
+                rows="8"
+                placeholder="Write your discussion..."></textarea>
+
+                <button type="submit">
+
+                    Create Thread
+
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- RIGHT SIDEBAR -->
+
+    <aside>
+
+        <!-- Trending Threads -->
+
+        <section class="card">
+
+            <h2>
+                Trending Threads
+            </h2>
+
+            <ul class="side-list">
+
+                <li>
+
+                    🔥 Topuria vs Islam
+
+                </li>
+
+                <li>
+
+                    🔥 Usyk's legacy
+
+                </li>
+
+                <li>
+
+                    🔥 UFC 330 Predictions
+
+                </li>
+
+                <li>
+
+                    🔥 Jones comeback
+
+                </li>
+
+            </ul>
+
+        </section>
+
+        <!-- Recent Posts -->
+
+        <section class="card">
+
+            <h2>
+
+                Recent Posts
+
+            </h2>
+
+            <ul class="side-list">
+
+                <li>
+
+                    Alex replied to
+                    <strong>
+                        Topuria vs Islam
+                    </strong>
+
+                </li>
+
+                <li>
+
+                    John replied to
+                    <strong>
+                        Best Heavyweight
+                    </strong>
+
+                </li>
+
+                <li>
+
+                    Sarah replied to
+                    <strong>
+                        UFC Rankings
+                    </strong>
+
+                </li>
+
+            </ul>
+
+        </section>
+
+        <!-- Popular Tags -->
+
+        <section class="card">
+
+            <h2>
+
+                Popular Tags
+
+            </h2>
+
+            <div class="tags">
+
+                <span>#UFC</span>
+
+                <span>#Boxing</span>
+
+                <span>#Topuria</span>
+
+                <span>#Islam</span>
+
+                <span>#Usyk</span>
+
+                <span>#Pereira</span>
+
+                <span>#Predictions</span>
+
+                <span>#Heavyweight</span>
+
+            </div>
+
+        </section>
+
+    </aside>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026 Fightoholic
+
+</footer>
+
+<!-- <script src=""></script> -->
+
+</body>
+</html>

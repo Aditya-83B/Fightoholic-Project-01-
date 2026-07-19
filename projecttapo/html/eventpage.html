@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UFC Fight Night | Fightoholic</title>
+  <link rel="stylesheet" href="../css/eventpage.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <a class="ac" href="Main.html"
+          ><svg class="site-logo" width="250" height="60" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="opt1Text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#CFD5DF" />
+    </linearGradient>
+    <linearGradient id="opt1Glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3B30" />
+      <stop offset="100%" stop-color="#FF9F1C" />
+    </linearGradient>
+  </defs>
+  <path d="M6 16 L16 6 H34 L44 16 V34 L34 44 H16 L6 34 Z" fill="none" stroke="url(#opt1Glow)" stroke-width="2.5" stroke-linejoin="round"/>
+  
+  <path d="M18 15 H32 V19 H22 V23 H30 V27 H22 V35 H18 Z" fill="#FFFFFF" />
+  
+  <text x="54" y="33" font-family="'Impact', 'Arial Black', sans-serif" font-size="23" font-style="italic" font-weight="900" fill="url(#opt1Text)" letter-spacing="1">FIGHT</text>
+  <text x="110" y="33" font-family="'Impact', 'Arial Black', sans-serif" font-size="23" font-style="italic" font-weight="900" fill="url(#opt1Glow)" letter-spacing="1">OHOLIC</text>
+</svg></a>
+    </div>
+    <ul>
+       <li><a class="c" href="Main.html">Home</a></li>
+        <li><a class="c" href="forum.html">Forum</a></li>
+        <li><a class="c" href="login.html">Login</a></li>
+        <li><a class="c" href="contactpage.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+    <form class="search-bar">
+      <input type="text" id="searchBox" placeholder="Search fighters, events, news">
+      <button type="button" onclick="searchBoxer()">Go</button>
+    </form>
+
+    <div class="layout">
+      <div class="main-column">
+        <section class="card">
+          <div class="event-hero">
+            <div class="poster" aria-label="UFC Fight Night poster">
+                <img src="https://images.tapology.com/poster_images/142777/profile/HMGvO6NXUAAyGvL.jpeg?1782874479" alt="">
+            </div>
+
+            <div class="event-main">
+              <div class="status-row">
+                <span class="badge">Upcoming</span>
+                <span class="badge dark">MMA Event</span>
+                <span class="badge dark">UFC</span>
+              </div>
+
+              <h1>UFC Fight Night</h1>
+              <p>Ultimate Fighting Championship returns to Paycom Center in Oklahoma City with a compact UFC Fight Night card featuring Amanda Ribas vs. Fatima Kline, heavyweight prospects, and flyweight action.</p>
+
+              <div class="stats-grid">
+                <div class="stat">
+                  <strong>Jul 18, 2026</strong>
+                  <span>Date</span>
+                </div>
+                <div class="stat">
+                  <strong>5:00 PM ET</strong>
+                  <span>Start Time</span>
+                </div>
+                <div class="stat">
+                  <strong>Paramount+</strong>
+                  <span>Broadcast</span>
+                </div>
+                <div class="stat">
+                  <strong>3</strong>
+                  <span>MMA Bouts</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs">
+            <a class="tab active" href="#fight-card">Fight Card</a>
+            <a class="tab" href="#cancelled">Cancellations</a>
+            <a class="tab" href="#weigh-ins">Weigh Ins</a>
+            <a class="tab" href="#predictions">Predictions</a>
+            <a class="tab" href="#discussion">Discussion</a>
+          </div>
+        </section>
+
+        <section id="fight-card" class="card table-card">
+          <div class="table-header">
+            <h2>Fight Card</h2>
+            <span>5 MMA bouts</span>
+          </div>
+
+          <div class="fight-list" id="eventList">
+</div>
+
+<!-- MAIN EVENT -->
+
+        </section>
+        <div id="aiCoachTrigger" class="ai-coach-trigger">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 90" width="100%" height="90" style="cursor: pointer; overflow: visible;">
+    <defs>
+      <filter id="cageGlow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#e10600" flood-opacity="0.3"/>
+        <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000000" flood-opacity="0.6"/>
+      </filter>
+      <linearGradient id="cageGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#c93300" />
+        <stop offset="20%" stop-color="#e10600" />
+        <stop offset="100%" stop-color="#ff7a00" />
+      </linearGradient>
+      <pattern id="cageMesh" width="6" height="6" patternUnits="userSpaceOnUse">
+        <path d="M 0 3 L 6 3 M 3 0 L 3 6" fill="none" stroke="#FFFFFF" stroke-width="0.5" opacity="0.04"/>
+      </pattern>
+    </defs>
+    <g filter="url(#cageGlow)">
+      <polygon points="26,0 104,0 130,26 130,64 104,90 26,90 0,64 0,26" fill="#111116" />
+      <polygon points="26,0 104,0 130,26 130,64 104,90 26,90 0,64 0,26" fill="url(#cageMesh)" />
+      <polygon points="26,0 104,0 130,26 130,64 104,90 26,90 0,64 0,26" fill="none" stroke="url(#cageGradient)" stroke-width="2.5" />
+      <polygon points="27,3 103,3 127,27 127,63 103,87 27,87 3,63 3,27" fill="none" stroke="#FFFFFF" stroke-width="0.75" opacity="0.12" />
+    </g>
+    <g fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', sans-serif" font-weight="900" text-anchor="middle" text-transform="uppercase">
+      <text x="65" y="38" font-size="22" letter-spacing="3">AI</text>
+      <text x="65" y="60" font-size="18" letter-spacing="2" fill="url(#cageGradient)">Coach</text>
+    </g>
+  </svg>
+</div>
+
+<!-- FIXED: Added the missing overlay element required by your script -->
+<div id="aiCoachOverlay" class="ai-coach-overlay"></div>
+
+<!-- Central Expanding AI Coach Interface Window -->
+<div id="aiCoachModal" class="ai-coach-modal">
+  <div class="modal-header">
+    <h3>AI COACH INSIGHTS</h3>
+    <small id="statusField" style="color: #ff9f1c; margin-left: 15px; font-weight: bold;"></small>
+    <button id="closeAiCoach" class="modal-close-btn">&times;</button>
+  </div>
+  <div class="modal-body">
+    <!-- Chat container targets this layout -->
+    <div class="chat-display" id="output">
+      <!-- FIXED: Gave the welcome message an individual id so the script can append text below it or replace it cleanly -->
+      <p id="welcomeMessage" style="color: #d6d9df; font-size: 14px; line-height: 1.5; margin: 0; border-left: 3px solid #ff7a00; padding-left: 10px;">
+        Corner secured. What strategy or prediction analysis do you need for the upcoming fights?
+      </p>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="userPrompt" placeholder="Ask about striking accuracy, trends, or fight breakdowns..." />
+      <button id="askBtn">Analyze</button>
+    </div>
+  </div>
+</div>
+
+
+        <div class="info-grid">
+          <section id="predictions" class="card info-card">
+            <h2>Predictions</h2>
+           <div class="prediction">
+
+    <div class="prediction-row">
+        <div class="prediction-name">Du Plessis</div>
+
+        <div class="prediction-bar">
+            <div class="prediction-fill" style="width:82%;"></div>
+        </div>
+
+        <div class="prediction-percent">82%</div>
+    </div>
+
+    <div class="prediction-row">
+        <div class="prediction-name">Duncan</div>
+
+        <div class="prediction-bar">
+            <div class="prediction-fill" style="width:84%;"></div>
+        </div>
+
+        <div class="prediction-percent">84%</div>
+    </div>
+
+    <div class="prediction-row">
+        <div class="prediction-name">Hooper</div>
+
+        <div class="prediction-bar">
+            <div class="prediction-fill" style="width:87%;"></div>
+        </div>
+
+        <div class="prediction-percent">87%</div>
+    </div>
+
+    <div class="prediction-row">
+        <div class="prediction-name">Kline</div>
+
+        <div class="prediction-bar">
+            <div class="prediction-fill" style="width:85%;"></div>
+        </div>
+
+        <div class="prediction-percent">85%</div>
+    </div>
+
+    <div class="prediction-row">
+        <div class="prediction-name">McMillen</div>
+
+        <div class="prediction-bar">
+            <div class="prediction-fill" style="width:52%;"></div>
+        </div>
+
+        <div class="prediction-percent">52%</div>
+    </div>
+
+</div>
+          </section>
+
+          <section class="card info-card">
+            <h2>Event Production</h2>
+            <ul class="production">
+              <li><span>Date/Time</span><strong>Saturday 07.18.2026 at 05:00 PM ET</strong></li>
+              <li><span>Promotion</span><strong>Ultimate Fighting Championship</strong></li>
+              <li><span>Venue</span><strong>Paycom Center</strong></li>
+              <li><span>Location</span><strong>Oklahoma City, Oklahoma</strong></li>
+            </ul>
+          </section>
+        </div>
+
+        <section id="cancelled" class="card info-card">
+          <h2>Cancelled & Fizzled Bouts</h2>
+          <p>No known scratched bouts or rumored matchups that fell through.</p>
+        </section>
+      </div>
+
+      <aside class="sidebar">
+        <section class="card side-card">
+          <h2>Quick Card</h2>
+          <ul class="quick-card">
+            <li><strong>Amanda Ribas vs. Fatima Kline</strong>115 lbs</li>
+            <li><strong>Alvin Hines vs. Allen Frye Jr.</strong>265 lbs</li>
+            <li><strong>Dione Barbosa vs. Veronica Hardy</strong>125 lbs</li>
+          </ul>
+        </section>
+
+        <section class="card ad-panel">
+          <div class="pickem-box">
+            <strong>Your Predictions</strong>
+            <span id="emptyPredictions">No predictions are made so far.</span>
+            <ul class="prediction-list" id="yourPredictions"></ul>
+          </div>
+        </section>
+
+        <section id="discussion" class="card side-card">
+          <h2>Event Discussion</h2>
+          <p>The official event thread is open for predictions and fight week notes.</p>
+          <span class="badge">25 replies</span>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy;Fightoholic</p>
+  </footer>
+
+  <script>
+    const predictions = {};
+
+    function searchBoxer() {
+      const query = document.getElementById("searchBox").value.trim();
+      if (query) {
+        alert("Searching for: " + query);
+      }
+    }
+
+    function pickFighter(button) {
+      const fightId = button.dataset.fight;
+      const fighterName = button.dataset.fighter;
+      predictions[fightId] = fighterName;
+
+      document.querySelectorAll(`.pick-btn[data-fight="${fightId}"]`).forEach((pickButton) => {
+        pickButton.classList.toggle("selected", pickButton === button);
+      });
+
+      renderPredictions();
+    }
+
+    function renderPredictions() {
+      const list = document.getElementById("yourPredictions");
+      const emptyMessage = document.getElementById("emptyPredictions");
+      const picks = Object.values(predictions);
+
+      list.innerHTML = "";
+      emptyMessage.style.display = picks.length ? "none" : "block";
+
+      picks.forEach((fighterName, index) => {
+        const item = document.createElement("li");
+        item.innerHTML = `<span>Pick ${index + 1}</span>${fighterName}`;
+        list.appendChild(item);
+      });
+    }
+  </script>
+   <script> const aiTrigger = document.getElementById('aiCoachTrigger');
+  const aiOverlay = document.getElementById('aiCoachOverlay');
+  const aiModal = document.getElementById('aiCoachModal');
+  const aiClose = document.getElementById('closeAiCoach');
+
+  aiTrigger.addEventListener('click', () => {
+    aiOverlay.classList.add('active');
+    aiModal.classList.add('active');
+    aiTrigger.style.opacity = '0';
+    aiTrigger.style.pointerEvents = 'none';
+  });
+
+  function closeCoachModal() {
+    aiOverlay.classList.remove('active');
+    aiModal.classList.remove('active');
+    aiTrigger.style.opacity = '1';
+    aiTrigger.style.pointerEvents = 'auto';
+  }
+  aiClose.addEventListener('click', closeCoachModal);
+  aiOverlay.addEventListener('click', closeCoachModal);
+</script>
+
+<!-- 3. AI SDK Module Integration Block -->
+<script type="module">
+  import { GoogleGenAI } from 'https://esm.sh/@google/genai';
+
+  const API_KEY = "AQ.Ab8RN6IGvxX8EFgytq7Ht8oM1JTOW1WXHv3hIOSRdOw1IPm5bQ"; 
+  
+  const askBtn = document.getElementById('askBtn');
+  const userPrompt = document.getElementById('userPrompt');
+  const output = document.getElementById('output');
+  const statusField = document.getElementById('statusField');
+
+  askBtn.addEventListener('click', async () => {
+    const textQuery = userPrompt.value.trim();
+    
+    if (!textQuery) {
+      output.innerHTML = `<p style="color: #ff9f1c;">⚠️ Please type a question into the text area first!</p>`;
+      return;
+    }
+
+    askBtn.disabled = true;
+    statusField.innerText = "Thinking...";
+    output.innerHTML = `<p style="color: #aab2c0; font-style: italic;">Analyzing tactics...</p>`;
+
+    try {
+      const ai = new GoogleGenAI({ apiKey: API_KEY });
+
+     // Change this line inside your try{} block:
+const response = await ai.models.generateContent({
+  model: 'gemini-3.5-flash', // <--- UPDATE THIS STRING
+  contents: textQuery,
+  config: {
+    systemInstruction: "You are CornerMan AI, an elite boxing and MMA tactical coach. Give concise, highly practical technical ringside advice using bold emphasis on key combos."
+  }
+});
+
+      output.innerHTML = `<p class="ai-message">${response.text.replace(/\n/g, '<br>')}</p>`;
+      statusField.innerText = "Ready";
+      userPrompt.value = ""; 
+
+    } catch (error) {
+      console.error(error);
+      output.innerHTML = `<p style="color: #e10600;">❌ Call Failed: ${error.message}</p>`;
+      statusField.innerText = "Error";
+    } finally {
+      askBtn.disabled = false;
+    }
+  });
+
+  userPrompt.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') askBtn.click();
+  });</script>
+  <script src="../js/event.js"></script>
+<script src="../js/eventjs.js"></script>
+</body>
+</html>
