@@ -320,24 +320,22 @@
     </footer>
 
     <script>
-      // Slider Mechanics
       const track = document.querySelector(".hero-track");
-      const slides = document.querySelectorAll(".hero-slide");
-      const prev = document.getElementById("prev");
-      const next = document.getElementById("next");
+const slides = document.querySelectorAll(".hero-slide");
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
 
-      let index = 0;
-      let moving = false;
+let index = 0;
+let moving = false;
 
-      function updateSlider() {
-        moving = true;
-        track.style.transform = `translateX(-${index * 100}%)`;
-        setTimeout(() => { moving = false; }, 650);
-      }
+function updateSlider() {
+  moving = true;
+  track.style.transform = `translateX(-${index * 100}%)`;
+  setTimeout(() => { moving = false; }, 500); // Matches the 0.5s CSS transition time
+}
 
-      next.onclick = () => { if (!moving) { index = (index + 1) % slides.length; updateSlider(); } };
-      prev.onclick = () => { if (!moving) { index = (index - 1 + slides.length) % slides.length; updateSlider(); } };
-
+next.onclick = () => { if (!moving) { index = (index + 1) % slides.length; updateSlider(); } };
+prev.onclick = () => { if (!moving) { index = (index - 1 + slides.length) % slides.length; updateSlider(); } };
       // Modal Window Controls
       const aiTrigger = document.getElementById('aiCoachTrigger');
       const aiOverlay = document.getElementById('aiCoachOverlay');
