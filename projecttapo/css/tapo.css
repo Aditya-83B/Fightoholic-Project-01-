@@ -328,34 +328,35 @@
         margin: 16px 0;
       }
 
-      .fighter-box {
-        min-width: 240px;
-        padding: 16px;
-        border-radius: 12px;
-        background: linear-gradient(145deg, #222831, #151922);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        transition: 0.3s;
-      }
+     .fighter-box {
+  /* Changed from min-width 240px to an absolute 350px width */
+  width: 350px;
+  padding: 16px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #222831, #151922);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 0.3s;
+  box-sizing: border-box; /* Ensures the padding stays inside the 350px width limit */
+}
 
-      .fighter-box:hover {
-        transform: scale(1.04);
-        border-color: rgba(225, 6, 0, 0.75);
-      }
+.fighter-box:hover {
+  transform: scale(1.04);
+  border-color: rgba(225, 6, 0, 0.75);
+}
 
-      .fighter-box h2 {
-        color: white;
-        margin-bottom: 5px;
-      }
+.fighter-box h2 {
+  color: white;
+  margin-bottom: 5px;
+}
 
-      .fighter-box img {
-        width: 100%; /* Changes from 30vw to perfectly scale inside its container */
-        max-width: 190px; /* Keeps the portrait aspect ratio intact */
-        height: 190px;
-        object-fit: cover;
-        border-radius: 15px;
-        display: block;
-      }
-
+.fighter-box img {
+  width: 100%; 
+  /* 350px total width minus 32px padding (16px left + 16px right) makes a flawless 318px square */
+  height: 318px; 
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+}
       .fight span {
         font-size: 40px;
         color: #e10600;
