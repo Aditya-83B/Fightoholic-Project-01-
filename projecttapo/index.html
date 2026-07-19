@@ -640,7 +640,8 @@
 <script type="module">
   import { GoogleGenAI } from 'https://esm.sh/@google/genai';
 
-  const API_KEY = "AQ.Ab8RN6IGvxX8EFgytq7Ht8oM1JTOW1WXHv3hIOSRdOw1IPm5bQ"; 
+  // 1. MUST BE A VALID AI STUDIO KEY STARTING WITH "AIzaSy..."
+  const API_KEY = "AIzaSyYourNewCorrectGeminiKeyHere"; 
   
   const askBtn = document.getElementById('askBtn');
   const userPrompt = document.getElementById('userPrompt');
@@ -660,16 +661,16 @@
     output.innerHTML = `<p style="color: #aab2c0; font-style: italic;">Analyzing tactics...</p>`;
 
     try {
+      // 2. Initialize exactly using the client configuration object property
       const ai = new GoogleGenAI({ apiKey: API_KEY });
 
-     // Change this line inside your try{} block:
-const response = await ai.models.generateContent({
-  model: 'gemini-3.5-flash', // <--- UPDATE THIS STRING
-  contents: textQuery,
-  config: {
-    systemInstruction: "You are CornerMan AI, an elite boxing and MMA tactical coach. Give concise, highly practical technical ringside advice using bold emphasis on key combos."
-  }
-});
+      const response = await ai.models.generateContent({
+        model: 'gemini-2.5-flash', // Note: gemini-2.5-flash is the standard stabler model alias
+        contents: textQuery,
+        config: {
+          systemInstruction: "You are CornerMan AI, an elite boxing and MMA tactical coach. Give concise, highly practical technical ringside advice using bold emphasis on key combos."
+        }
+      });
 
       output.innerHTML = `<p class="ai-message">${response.text.replace(/\n/g, '<br>')}</p>`;
       statusField.innerText = "Ready";
