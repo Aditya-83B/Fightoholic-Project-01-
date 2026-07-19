@@ -85,7 +85,7 @@
 
       .search-panel {
         width: 300px;
-        background: radial-gradient( #c93300, #e10600 20%, #ff7a00 );
+        background: linear-gradient(135deg, #c93300, #e10600 60%, #ff7a00);
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 15px 35px rgba(225, 6, 0, 0.22);
@@ -147,12 +147,12 @@
       .ticker {
         flex: 1;
         height: 52px;
-
+        /* Replaced light theme with dark theme gradient matching your site */
         background: linear-gradient(135deg, #151923, #0f1115);
         color: white;
         border-radius: 10px;
         overflow: hidden;
-        
+        /* Changed to an intense dark red thematic glow */
         box-shadow:
           0 0 20px rgba(225, 6, 0, 0.15),
           inset 0 0 0 1px rgba(255, 255, 255, 0.05);
@@ -349,8 +349,8 @@
 
       .fighter-box img {
         width: 100%; /* Changes from 30vw to perfectly scale inside its container */
-        max-width: 400px; /* Keeps the portrait aspect ratio intact */
-        height: 350px;
+        max-width: 200px; /* Keeps the portrait aspect ratio intact */
+        height: 200px;
         object-fit: cover;
         border-radius: 15px;
         display: block;
@@ -472,189 +472,7 @@
         gap: 12px;
         margin-bottom: 10px;
       }
-      .make{
-        margin-top: 40px;
-      }
-      .make:hover{
-        transition: .7s;
-        transform: scale(1.1);
-      }
-      /* --- AI Coach Fixed Button & Component Layouts --- */
 
-/* Fixed Bouncing Placement */
-.ai-coach-trigger {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width: 100px;
-  height: 70px;
-  z-index: 999;
-  transition: transform 0.2s ease-in-out;
-  animation: cageBounce 2.4s infinite ease-in-out;
-}
-
-.ai-coach-trigger:hover {
-  animation-play-state: paused;
-  transform: scale(1.08);
-}
-
-/* Rhythmic Octagon Ground Vibration Animation Cycle */
-@keyframes cageBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-}
-
-/* Glassmorphism Dynamic Blur Filter Backdrop screen */
-.ai-coach-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(10, 12, 16, 0.65);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  z-index: 1000;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.ai-coach-overlay.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Central Expanding Octagon Structural Modal Window Container */
-.ai-coach-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.6);
-  width: 90%;
-  max-width: 550px;
-  background: #151923;
-  border: 2px solid #e10600;
-  border-radius: 12px;
-  box-shadow: 0 25px 55px rgba(225, 6, 0, 0.25), inset 0 0 15px rgba(255, 255, 255, 0.03);
-  z-index: 1001;
-  opacity: 0;
-  pointer-events: none;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease-out;
-}
-
-.ai-coach-modal.active {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-/* Internal Modal Component Styling details */
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background: #11151d;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.modal-header h3 {
-  font-family: Arial, sans-serif;
-  font-weight: 900;
-  letter-spacing: 1px;
-  color: #ffffff;
-}
-
-.modal-close-btn {
-  background: none;
-  border: none;
-  color: #aab2c0;
-  font-size: 24px;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.modal-close-btn:hover {
-  color: #e10600;
-}
-
-.modal-body {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.chat-display {
-  height: 220px;
-  background: #0f1115;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-  padding: 12px;
-  overflow-y: auto;
-}
-
-.ai-message {
-  color: #d6d9df;
-  font-size: 14px;
-  line-height: 1.5;
-  margin: 0;
-  border-left: 3px solid #ff7a00;
-  padding-left: 10px;
-}
-
-.user-message {
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 1.5;
-  margin: 10px 0;
-  text-align: right;
-  background: rgb(250, 110, 45);
-  padding: 8px 12px;
-  border-radius: 6px;
-  display: inline-block;
-  float: right;
-  clear: both;
-}
-
-.chat-input-row {
-  display: flex;
-  gap: 10px;
-}
-
-.chat-input-row input {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 10px 14px;
-  border-radius: 6px;
-  color: white;
-  outline: none;
-  font-size: 14px;
-}
-
-.chat-input-row input:focus {
-  border-color: #e10600;
-}
-
-.chat-input-row button {
-  padding: 0 20px;
-  background: linear-gradient(135deg, #e10600, #ff7a00);
-  border: none;
-  border-radius: 6px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-
-.chat-input-row button:hover {
-  opacity: 0.9;
-}
       .my-feed {
         background: linear-gradient(135deg, #e10600, #ff7a00);
         padding: 8px 12px;
