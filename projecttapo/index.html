@@ -427,36 +427,34 @@
     </footer>
 
     <script>
-     const track = document.querySelector(".hero-track");
-const slides = document.querySelectorAll(".hero-slide");
-const prev = document.getElementById("prev");
-const next = document.getElementById("next");
+      const track = document.querySelector(".hero-track");
+      const slides = document.querySelectorAll(".hero-slide");
+      const prev = document.getElementById("prev");
+      const next = document.getElementById("next");
 
-let index = 0;
-let isMoving = false;
+      let index = 0;
+      let moving = false;
 
-function updateSlider() {
-  isMoving = true;
-  // Moves the track precisely by multiples of 100% view width
-  track.style.transform = `translateX(-${index * 100}%)`;
-  
-  // Re-enable clicks after the 500ms CSS animation finishes
-  setTimeout(() => {
-    isMoving = false;
-  }, 500);
-}
+      function updateSlider() {
+        moving = true;
+        track.style.transform = `translateX(-${index * 100}%)`;
 
-next.onclick = () => {
-  if (isMoving) return;
-  index = (index + 1) % slides.length;
-  updateSlider();
-};
+        setTimeout(() => {
+          moving = false;
+        }, 650);
+      }
 
-prev.onclick = () => {
-  if (isMoving) return;
-  index = (index - 1 + slides.length) % slides.length;
-  updateSlider();
-};
+      next.onclick = () => {
+        if (moving) return;
+        index = (index + 1) % slides.length;
+        updateSlider();
+      };
+
+      prev.onclick = () => {
+        if (moving) return;
+        index = (index - 1 + slides.length) % slides.length;
+        updateSlider();
+      };
       // Modal Window Controls
       const aiTrigger = document.getElementById('aiCoachTrigger');
       const aiOverlay = document.getElementById('aiCoachOverlay');
