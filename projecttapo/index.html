@@ -499,12 +499,10 @@
       aiOverlay.addEventListener('click', closeCoachModal);
     </script>
 
-    <script type="module">
-      import { GoogleGenAI } from 'https://esm.sh/@google/genai';
-
-      // 1. Define the key and assign it to the environment window space for the browser bundle
+<!-- Native Browser Fetch Integration -->
+    <script>
+      // 1. Paste your functional AI Studio key here
       const API_KEY = "AQ.Ab8RN6KoQpxPRtk3lWoK4z-Ig7Cw4VC-RnbKQ2N_W31l3tTMbA"; 
-      window.process = { env: { GEMINI_API_KEY: API_KEY } };
       
       const askBtn = document.getElementById('askBtn');
       const userPrompt = document.getElementById('userPrompt');
@@ -524,18 +522,35 @@
         output.innerHTML = `<p style="color: #aab2c0; font-style: italic;">Analyzing tactics...</p>`;
 
         try {
-          // The SDK now pulls the key instantly from the window environment setup above
-          const ai = new GoogleGenAI();
-
-          const response = await ai.models.generateContent({
-            model: 'gemini-1.5-flash', 
-            contents: textQuery,
-            config: {
-              systemInstruction: "You are CornerMan AI, an elite boxing and MMA tactical coach. Give concise, highly practical technical ringside advice using bold emphasis on key combos."
-            }
+          // 2. Query the official endpoint directly using standard fetch
+          const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+          
+          const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              contents: [{
+                parts: [{ text: textQuery }]
+              }],
+              systemInstruction: {
+                parts: [{ text: "You are CornerMan AI, an elite boxing and MMA tactical coach. Give concise, highly practical technical ringside advice using bold emphasis on key combos." }]
+              }
+            })
           });
 
-          output.innerHTML = `<p class="ai-message">${response.text.replace(/\n/g, '<br>')}</p>`;
+          if (!response.ok) {
+            const errData = await response.json();
+            throw new Error(errData.error?.message || 'API request failed');
+          }
+
+          const data = await response.json();
+          
+          // 3. Extract the response text safely
+          const replyText = data.candidates[0].content.parts[0].text;
+
+          output.innerHTML = `<p class="ai-message">${replyText.replace(/\n/g, '<br>')}</p>`;
           statusField.innerText = "Ready";
           userPrompt.value = ""; 
 
