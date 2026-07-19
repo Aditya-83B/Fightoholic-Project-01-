@@ -459,7 +459,6 @@
     </footer>
 
     <script>
-      // 1. Slider Mechanics
       const track = document.querySelector(".hero-track");
       const slides = document.querySelectorAll(".hero-slide");
       const prev = document.getElementById("prev");
@@ -500,12 +499,12 @@
       aiOverlay.addEventListener('click', closeCoachModal);
     </script>
 
-    <!-- 3. AI SDK Module Integration Block -->
     <script type="module">
       import { GoogleGenAI } from 'https://esm.sh/@google/genai';
 
-      // 1. MUST BE A VALID AI STUDIO KEY STARTING WITH "AIzaSy..."
+      // 1. Define the key and assign it to the environment window space for the browser bundle
       const API_KEY = "AQ.Ab8RN6KoQpxPRtk3lWoK4z-Ig7Cw4VC-RnbKQ2N_W31l3tTMbA"; 
+      window.process = { env: { GEMINI_API_KEY: API_KEY } };
       
       const askBtn = document.getElementById('askBtn');
       const userPrompt = document.getElementById('userPrompt');
@@ -525,15 +524,16 @@
         output.innerHTML = `<p style="color: #aab2c0; font-style: italic;">Analyzing tactics...</p>`;
 
         try {
-const ai = new GoogleGenAI({ key: API_KEY });
+          // The SDK now pulls the key instantly from the window environment setup above
+          const ai = new GoogleGenAI();
 
-         const response = await ai.models.generateContent({
-  model: 'gemini-1.5-flash', // <--- Updated to the correct active model
-  contents: textQuery,
-  config: {
-    systemInstruction: "You are CornerMan AI, an elite boxing and MMA tactical coach. Give concise, highly practical technical ringside advice using bold emphasis on key combos."
-  }
-});
+          const response = await ai.models.generateContent({
+            model: 'gemini-1.5-flash', 
+            contents: textQuery,
+            config: {
+              systemInstruction: "You are CornerMan AI, an elite boxing and MMA tactical coach. Give concise, highly practical technical ringside advice using bold emphasis on key combos."
+            }
+          });
 
           output.innerHTML = `<p class="ai-message">${response.text.replace(/\n/g, '<br>')}</p>`;
           statusField.innerText = "Ready";
