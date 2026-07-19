@@ -528,13 +528,13 @@
           // 2. Initialize exactly using the client configuration object property
           const ai = new GoogleGenAI({ apiKey: API_KEY });
 
-          const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash', 
-            contents: textQuery,
-            config: {
-              systemInstruction: "You are CornerMan AI, an elite boxing and MMA tactical coach. Give concise, highly practical technical ringside advice using bold emphasis on key combos."
-            }
-          });
+         const response = await ai.models.generateContent({
+  model: 'gemini-1.5-flash', // <--- Updated to the correct active model
+  contents: textQuery,
+  config: {
+    systemInstruction: "You are CornerMan AI, an elite boxing and MMA tactical coach. Give concise, highly practical technical ringside advice using bold emphasis on key combos."
+  }
+});
 
           output.innerHTML = `<p class="ai-message">${response.text.replace(/\n/g, '<br>')}</p>`;
           statusField.innerText = "Ready";
